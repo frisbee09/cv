@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CVGrid = styled.div`
-    display: grid;
-    max-width: 800px;
+	display: grid;
+	max-width: 800px;
+	background: blue;
 `;

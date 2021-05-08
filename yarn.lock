@@ -1627,6 +1627,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cj09/css@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "@cj09/css@npm:1.0.7"
+  checksum: 57ebbd21ac82c91fb4cf7137c6918faefdca9b9c6528121d18a146cf0e4d0067f2a18de0d40c65083f255badf4699205048092ca0552ef52538dd592b7b8266f
+  languageName: node
+  linkType: hard
+
 "@cnakazawa/watch@npm:^1.0.3":
   version: 1.0.4
   resolution: "@cnakazawa/watch@npm:1.0.4"
@@ -5446,6 +5453,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cv@workspace:."
   dependencies:
+    "@cj09/css": ^1.0.7
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
