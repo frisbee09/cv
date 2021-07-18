@@ -1,15 +1,21 @@
 import * as React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { CVGrid } from "./structureSC";
+import CV from "./CV";
 import { GunmetalTheme } from "./theme";
 
 interface IAppProps {}
 
 const GS = createGlobalStyle`
-  body {
+  html, body {
     background: ${(props) => props.theme.background.getHexA()};
+    * {
+      box-sizing: border-box;
+    }
+  }
+  body {
     height: 100vh;
-    widtH: 100vw;
+    width: 100vw;
+    color: ${props => props.theme.text.getHexA()};
 
     #root {
       height: 100%;
@@ -21,7 +27,7 @@ const GS = createGlobalStyle`
 const App: React.FunctionComponent<IAppProps> = (props) => {
   return (
     <ThemeProvider theme={GunmetalTheme}>
-      <CVGrid>Hi</CVGrid>
+      <CV/>
       <GS />
     </ThemeProvider>
   );
