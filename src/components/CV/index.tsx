@@ -4,16 +4,19 @@ import CJHeadshot from './Headshot.jpg';
 import CVHeader from './Header';
 import CVBody from './Body';
 
-interface ICVProps {
-}
+interface ICVProps {}
 
-const CV: React.FunctionComponent<ICVProps> = (props) => {
-  return (
-    <CVGrid>
-      <CVHeader/>
-      <LeftColumn><ProfilePicture src={CJHeadshot}/><h2>Stats</h2></LeftColumn>
-      <CVBody/>
-      </CVGrid>);
+const CV: React.FunctionComponent<ICVProps> = props => {
+	return (
+		<CVGrid>
+			<CVHeader />
+			<LeftColumn>
+				<ProfilePicture src={CJHeadshot} />
+				<h2>Stats</h2>
+			</LeftColumn>
+			<CVBody />
+		</CVGrid>
+	);
 };
 
 export default CV;

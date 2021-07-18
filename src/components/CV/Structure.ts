@@ -19,7 +19,7 @@ export const CVGrid = styled.div`
 
 	display: grid;
 	grid-template-rows: auto 1fr;
-	grid-template-columns: 270px 1fr;
+	grid-template-columns: minmax(300px, 30%) minmax(0, 1fr);
 `;
 
 /**
@@ -41,6 +41,25 @@ export const HeaderWrapper = styled.div`
  */
 export const HeaderContentWrapper = styled.div`
 	grid-area: content;
+
+	min-height: 200px;
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
+	text-transform: uppercase;
+
+	> h1 {
+		margin: 10px 0;
+		letter-spacing: 10px;
+		font-weight: 500;
+	}
+	> hr {
+		width: 100px;
+	}
 `;
 
 export const BodyWrapper = styled.div`
@@ -51,9 +70,10 @@ export const BodyWrapper = styled.div`
 export const ProfilePicture = styled.img`
 	grid-area: profile;
 	border-radius: 15px;
+	border-radius: 50%;
 
-	width: 220px;
-	height: 250px;
+	width: 200px;
+	height: 200px;
 	object-fit: cover;
 	object-position: top;
 
@@ -68,8 +88,9 @@ export const LeftColumn = styled.div`
 
 	display: flex;
 	flex-direction: column;
-	margin-left: 15px;
-	margin-top: 15px;
+	margin: 25px;
+	margin-right: 0;
+	margin-bottom: 0;
 	border-radius: 10px 10px 0 0;
 
 	> img {
