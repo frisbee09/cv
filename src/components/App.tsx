@@ -1,13 +1,13 @@
 import * as React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { CVGrid } from "./structureSC";
-import { CVTheme } from "./theme";
+import { GunmetalTheme } from "./theme";
 
 interface IAppProps {}
 
 const GS = createGlobalStyle`
   body {
-    background: ${(props) => props.theme.secondary.getHexA()};
+    background: ${(props) => props.theme.background.getHexA()};
     height: 100vh;
     widtH: 100vw;
 
@@ -20,7 +20,7 @@ const GS = createGlobalStyle`
 
 const App: React.FunctionComponent<IAppProps> = (props) => {
   return (
-    <ThemeProvider theme={CVTheme}>
+    <ThemeProvider theme={GunmetalTheme}>
       <CVGrid>Hi</CVGrid>
       <GS />
     </ThemeProvider>

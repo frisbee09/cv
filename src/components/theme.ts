@@ -1,12 +1,20 @@
 import { Colour, ColourType } from '@cj09/css';
 
+export interface CVThemeType {
+	background: Colour;
+	foreground: Colour;
+	accent: Colour;
+}
+
 // Colour Scheme generated with coolors.co :)
-export const CVTheme = {
-	primary: new Colour({ mode: ColourType.rgb, values: [34, 124, 157] }),
-	secondary: new Colour({ mode: ColourType.rgb, values: [132, 220, 198] }),
-	tertiary: new Colour({ mode: ColourType.rgb, values: [44, 42, 74] }),
-	accentOne: new Colour({ mode: ColourType.rgb, values: [215, 38, 61] }),
-	accentTwo: new Colour({ mode: ColourType.rgb, values: [237, 174, 73] }),
+export const MidnightBlueTheme: CVThemeType = {
+	background: new Colour({ mode: ColourType.hex, values: '2B2D42' }),
+	foreground: new Colour({ mode: ColourType.hex, values: 'B8BEDD' }),
+	accent: new Colour({ mode: ColourType.hex, values: 'FFB140' }),
 };
 
-export type CVThemeType = typeof CVTheme;
+export const GunmetalTheme: CVThemeType = {
+	background: new Colour({ mode: ColourType.hex, values: '292F36' }),
+	foreground: new Colour({ mode: ColourType.hex, values: '4ECDC4' }),
+	accent: new Colour({ mode: ColourType.hex, values: 'FF6B6B' }),
+};

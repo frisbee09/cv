@@ -5,5 +5,5 @@ export const CVGrid = styled.div`
 	display: grid;
 	max-width: 1000px;
 	height: 100%;
-	background: ${props => props.theme.primary.getHexA()};
+	background: ${props => props.theme.background.override({ l: 10 }).getHexA()};
 `;

@@ -1627,10 +1627,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cj09/css@npm:^1.0.7":
-  version: 1.0.7
-  resolution: "@cj09/css@npm:1.0.7"
-  checksum: 57ebbd21ac82c91fb4cf7137c6918faefdca9b9c6528121d18a146cf0e4d0067f2a18de0d40c65083f255badf4699205048092ca0552ef52538dd592b7b8266f
+"@cj09/css@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@cj09/css@npm:1.4.0"
+  checksum: 1c56be530a6c74788331e3f89ba43019ecb5ffa8ce16ac1a37f80fce76dcbaa15054b3584722d57965e5c9050b2634fa1ff932ca106b6d87d7b397f55137cc84
   languageName: node
   linkType: hard
 
@@ -5453,7 +5453,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cv@workspace:."
   dependencies:
-    "@cj09/css": ^1.0.7
+    "@cj09/css": ^1.4.0
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
@@ -5478,7 +5478,7 @@ __metadata:
     react-is: ^17.0.2
     react-scripts: 4.0.3
     styled-components: ^5.3.0
-    typescript: ^4.1.2
+    typescript: ^4.3.5
     web-vitals: ^1.0.1
   languageName: unknown
   linkType: soft
@@ -14916,23 +14916,23 @@ resolve@1.18.1:
   languageName: node
   linkType: hard
 
-typescript@^4.1.2:
-  version: 4.2.4
-  resolution: "typescript@npm:4.2.4"
+typescript@^4.3.5:
+  version: 4.3.5
+  resolution: "typescript@npm:4.3.5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: edaede2fa77f56b7fba80ee624a2368ab1216e75b0434d968ccb47ab0a5e2f6d94f848b3b111c1237dd71e988cd376af26370dcdad3b94355c76e759f0dd0a1e
+  checksum: d9a8e78d72dd19896e6bfa73ab2a0fcea6eca2700d1d6e7c33f67a970af54a3e0fed8f715a8c4e6a0ff7fc0995067b394b2003518ab0aa84cd396377e54b760c
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.1.2#builtin<compat/typescript>":
-  version: 4.2.4
-  resolution: "typescript@patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"
+"typescript@patch:typescript@^4.3.5#builtin<compat/typescript>":
+  version: 4.3.5
+  resolution: "typescript@patch:typescript@npm%3A4.3.5#builtin<compat/typescript>::version=4.3.5&hash=ddfc1b"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 3be44317593182e8ce494c114e7ad9b0bb2553a22f3085cc6da4f0a36912c20850daa9be4c898af2ab6fc8b12f430c1c9e46ac715721867cd38643f2350d3ef9
+  checksum: 7f0b8343f71ecac18095be1476b398aca420ab60dc207cc1efe078f381eef5527b80a518297720257114cdbda65612f8839e4b63e85dc95e67ac5cbbade8bdf0
   languageName: node
   linkType: hard
 
