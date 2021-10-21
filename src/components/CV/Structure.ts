@@ -42,7 +42,7 @@ export const HeaderWrapper = styled.div`
 export const HeaderContentWrapper = styled.div`
 	grid-area: content;
 
-	min-height: 200px;
+	min-height: 130px;
 
 	display: flex;
 	flex-direction: column;
@@ -77,7 +77,7 @@ export const ProfilePicture = styled.img`
 	object-fit: cover;
 	object-position: top;
 
-	filter: contrast(1.02) opacity(0.9);
+	filter: contrast(1.02);
 `;
 
 export const LeftColumn = styled.div`
@@ -85,6 +85,7 @@ export const LeftColumn = styled.div`
 	grid-column: 1 / 2;
 	background: ${props =>
 		props.theme.foreground.override({ s: 30, l: 45 }).getHexA()};
+	background: transparent;
 
 	display: flex;
 	flex-direction: column;

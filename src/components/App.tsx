@@ -21,6 +21,9 @@ const GS = createGlobalStyle`
       height: 100%;
       width: 100%;
     }
+
+    /* Set the default 1rem font size to 14px */
+    font-size: ${(14 * 100) / 16}%;
   }
 `;
 
