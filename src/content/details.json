@@ -1,0 +1,67 @@
+{
+	"name": "Chris Johnstone",
+	"skills": {
+		"proficiencies": [
+			"TypeScript",
+			"React",
+			"Styled Components",
+			"i18next",
+			"Webpack",
+			"Node",
+			"NPM",
+			"Yarn",
+			"Express",
+			"Mongoose",
+			"Jest"
+		],
+		"experienceWith": ["AWS", "MongoDB", "SQL", "Git", "Babel"],
+		"languages": ["Python", "HTML5", "CSS3"]
+	},
+	"hobbies": {
+		"creative": ["Performing Arts", "Photography", "Cinematography"],
+		"technology": ["Custom PC Builds", "PC Gaming"],
+		"other": ["Hiking", "Skiing"]
+	},
+	"education": [
+		{
+			"name": "Online Resources",
+			"at": "freeCodeCamp, CodeCademy Pro, CodeFights, Mongo University",
+			"start": 2017,
+			"end": 2018,
+			"content": "onlineResources.md"
+		},
+		{
+			"name": "Bachelors Degree",
+			"at": "University of Nottingham",
+			"start": 2010,
+			"end": 2013,
+			"content": "university.md",
+			"results": {
+				"Mathematics BSc (Hons)": "2.1"
+			}
+		},
+		{
+			"name": "A-Levels",
+			"at": "St Peter's Catholic School Sixth Form",
+			"start": 2008,
+			"end": 2010,
+			"results": {
+				"Maths": "A",
+				"Further Maths": "A",
+				"Chemistry": "A",
+				"Biology": "B"
+			}
+		},
+		{
+			"name": "GCSEs",
+			"at": "St Peter's Catholic School",
+			"start": 2003,
+			"end": 2008,
+			"results": {
+				"A*": 9,
+				"A": 2
+			}
+		}
+	],
+	"experience": []
+}
