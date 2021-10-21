@@ -12,7 +12,6 @@ const CV: React.FunctionComponent<ICVProps> = props => {
 			<CVHeader />
 			<LeftColumn>
 				<ProfilePicture src={CJHeadshot} />
-				<h2>Stats</h2>
 			</LeftColumn>
 			<CVBody />
 		</CVGrid>

@@ -19,7 +19,7 @@ export const CVGrid = styled.div`
 
 	display: grid;
 	grid-template-rows: auto 1fr;
-	grid-template-columns: minmax(300px, 30%) minmax(0, 1fr);
+	grid-template-columns: minmax(350px, 30%) minmax(0, 1fr);
 `;
 
 /**
@@ -30,7 +30,7 @@ export const HeaderWrapper = styled.div`
 	grid-column: 1 / -1;
 	display: grid;
 
-	grid-template-columns: 300px 1fr;
+	grid-template-columns: 350px 1fr;
 	grid-template-areas: 'bannerPlaceholder content';
 
 	background: ${props => props.theme.foreground.getHexA()};

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { HeaderContentWrapper, HeaderWrapper } from './Structure';
+const details = require('../../content/details.json');
 
 interface ICVHeaderProps {}
 
@@ -7,10 +8,10 @@ const CVHeader: React.FunctionComponent<ICVHeaderProps> = props => {
 	return (
 		<HeaderWrapper>
 			<HeaderContentWrapper>
-				<h1>Chris Johnstone</h1>
+				<h1>{details.name}</h1>
 				<hr />
 				<div>
-					<p>Front end web developer</p>
+					<p>{details.tagline}</p>
 				</div>
 			</HeaderContentWrapper>
 		</HeaderWrapper>
