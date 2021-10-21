@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 const details = require('../../../content/details.json');
 
 interface IEducationItemProps {
@@ -11,27 +11,30 @@ interface IEducationItemProps {
 	results?: { [item: string]: string };
 }
 
+const EDUCATION_ITEM_ACCENT = css`
+	${props => props.theme.accent.override({ s: 50 }).getHexA()}
+`;
 const EducationItemWrapper = styled.div`
 	.header {
 		display: flex;
 		justify-content: space-between;
 
-		margin-top: 15px;
-		margin-bottom: 0px;
-		color: ${props => props.theme.accent.override({ s: 50 }).getHexA()};
+		margin-top: 10px;
+		margin-bottom: -3px;
+		color: ${EDUCATION_ITEM_ACCENT};
 		> .name {
 			text-transform: uppercase;
 		}
 		~ .location {
 			margin-top: 0px;
-			margin-bottom: 10px;
-			font-size: 0.8rem;
-			color: ${props => props.theme.accent.override({ s: 50 }).getHexA()};
+			margin-bottom: 5px;
+			font-size: 0.85rem;
+			font-style: italic;
+			color: ${EDUCATION_ITEM_ACCENT};
 		}
 	}
 
 	.result {
-		font-style: italic;
 		::after {
 			content: ' / ';
 		}
@@ -40,6 +43,11 @@ const EducationItemWrapper = styled.div`
 				content: '';
 			}
 		}
+	}
+
+	hr {
+		border-color: ${props => props.theme.text.getHexA()};
+		opacity: 0.5;
 	}
 `;
 

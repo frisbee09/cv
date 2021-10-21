@@ -16,17 +16,17 @@
 			"Jest"
 		],
 		"experienceWith": ["AWS", "MongoDB", "SQL", "Git", "Babel"],
-		"languages": ["Python", "HTML5", "CSS3"]
+		"otherLanguages": ["Python", "HTML5", "CSS3"]
 	},
 	"hobbies": {
-		"creative": ["Performing Arts", "Photography", "Cinematography"],
-		"technology": ["Custom PC Builds", "PC Gaming"],
-		"other": ["Hiking", "Skiing"]
+		"creative": ["🎭 Performing Arts", "📸 Photography", "🎥 Cinematography"],
+		"technology": ["🖥️ Custom PC Builds", "🕹️ PC Gaming"],
+		"other": ["🚶 Hiking", "⛷️ Skiing"]
 	},
 	"education": [
 		{
 			"name": "Online Resources",
-			"at": "freeCodeCamp, CodeCademy Pro, CodeFights, Mongo University",
+			"at": "Self taught at freeCodeCamp, CodeCademy Pro, CodeFights, Mongo University",
 			"start": 2017,
 			"end": 2018,
 			"content": "onlineResources.md"
