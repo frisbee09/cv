@@ -1,6 +1,6 @@
 {
 	"name": "Chris Johnstone",
-    "tagline": "Full Stack Web Developer",
+	"tagline": "Full Stack Web Developer",
 	"skills": {
 		"proficiencies": [
 			"TypeScript",
@@ -64,5 +64,26 @@
 			}
 		}
 	],
-	"experience": []
+	"experience": [
+		{
+			"name": "Aurora Energy Research",
+			"start": 2018,
+			"end": "current",
+			"role": "Software Engineer",
+			"content": ""
+		},
+		{
+			"name": "PET-Xi",
+			"start": 2015,
+			"end": 2018,
+			"role": "Subject Expert",
+			"content": ""
+		}
+	],
+	"sideProjects": [
+		{ "name": "cv", "repo": "", "url": "", "content": "" },
+		{ "name": "@cj09/css", "repo": "", "url": "", "content": "" },
+		{ "name": "Online Lingo", "repo": "", "url": "", "content": "" },
+		{ "name": "Board Game Server", "repo": "", "url": "", "content": "" }
+	]
 }
