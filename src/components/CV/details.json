@@ -29,14 +29,14 @@
 			"at": "Self taught at freeCodeCamp, CodeCademy Pro, CodeFights, Mongo University",
 			"start": 2017,
 			"end": 2018,
-			"content": "content/onlineResources.md"
+			"contentFile": "content/education/onlineResources.md"
 		},
 		{
 			"name": "Bachelors Degree",
 			"at": "University of Nottingham",
 			"start": 2010,
 			"end": 2013,
-			"content": "content/university.md",
+			"contentFile": "content/education/university.md",
 			"results": {
 				"Mathematics BSc (Hons)": "2.1"
 			}
@@ -66,29 +66,50 @@
 	],
 	"experience": [
 		{
-			"name": "Aurora Energy Research",
-			"start": 2018,
+			"name": "Software Engineer",
+			"at": "Aurora Energy Research",
+			"start": 2019,
 			"end": "current",
-			"role": "Software Engineer",
-			"content": "content/"
+			"contentFile": "content/experience/aurora.md"
 		},
 		{
-			"name": "PET-Xi",
+			"name": "Junior Software Engineer",
+			"at": "Aurora Energy Research",
+			"start": 2018,
+			"end": 2019
+		},
+		{
+			"name": "Subject Expert",
+			"at": "PET-Xi",
 			"start": 2015,
 			"end": 2018,
-			"role": "Subject Expert",
-			"content": "content/"
+			"contentFile": "content/experience/pet.md"
 		}
 	],
 	"sideProjects": [
-		{ "name": "cv", "repo": "", "url": "", "content": "content/" },
-		{ "name": "@cj09/css", "repo": "", "url": "", "content": "content/" },
-		{ "name": "Online Lingo", "repo": "", "url": "", "content": "content/" },
+		{
+			"name": "cv",
+			"repo": "",
+			"url": "",
+			"contentFile": "content/hobbies/cv.md"
+		},
+		{
+			"name": "@cj09/css",
+			"repo": "",
+			"url": "",
+			"contentFile": "content/hobbies/css.md"
+		},
+		{
+			"name": "Online Lingo",
+			"repo": "",
+			"url": "",
+			"contentFile": "content/hobbies/onlineLingo.md"
+		},
 		{
 			"name": "Board Game Server",
 			"repo": "",
 			"url": "",
-			"content": "content/"
+			"contentFile": "content/"
 		}
 	]
 }

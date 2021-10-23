@@ -1,1 +1,0 @@
-As a final year project, I used MATLAB to compute analysis on waveforms with varying types of simulated distortion. I used Fourier series to break the waveforms into a summation and compared the co-efficients of the highest contributors.

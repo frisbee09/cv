@@ -41,7 +41,7 @@ const RenderMarkdownFile: React.FunctionComponent<IRenderMarkdownProps> = ({
 	}, [mdFilePath]);
 
 	if (mdFilePath) {
-		if (markdownAsString) {
+		if (markdownAsString !== undefined) {
 			return <ReactMarkdown children={markdownAsString} />;
 		} else if (markdownRequestFailed) {
 			return null;
