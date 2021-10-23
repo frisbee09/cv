@@ -1,0 +1,4 @@
+- Teaching intensive Maths revision courses across the country, covering the two year Maths specification in one week
+- Quickly taking a new cohort of (sometimes difficult) learners on board and keeping them engaged and participating
+- Updating and maintaining curriculum to stay in line with specifications set out by governments and exam boards
+- Automated distributing any changes to slide packs out to the courses that used them via a COM Add On for PowerPoint
