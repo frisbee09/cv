@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { HeaderContentWrapper, HeaderWrapper } from './Structure';
-const details = require('../../content/details.json');
+const details = require('./details.json');
 
 interface ICVHeaderProps {}
 

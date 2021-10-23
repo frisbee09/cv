@@ -1,6 +1,10 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-const details = require('../../../content/details.json');
+import ReactMarkdown from 'react-markdown';
+import { getPublicAssetLocation } from '../../../utils/getPublicAssetLocation';
+import Loading from '../../Loading';
+import RenderMarkdownFile from '../RenderMarkdown';
+const details = require('../details.json');
 
 interface IEducationItemProps {
 	name: string;
@@ -75,6 +79,7 @@ const EducationItem: React.FunctionComponent<IEducationItemProps> = ({
 							{r[0]} ({r[1]})
 						</span>
 					))}
+				{content && <RenderMarkdownFile file={content} />}
 			</div>
 			<hr />
 		</EducationItemWrapper>

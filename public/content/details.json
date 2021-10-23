@@ -29,14 +29,14 @@
 			"at": "Self taught at freeCodeCamp, CodeCademy Pro, CodeFights, Mongo University",
 			"start": 2017,
 			"end": 2018,
-			"content": "onlineResources.md"
+			"content": "content/onlineResources.md"
 		},
 		{
 			"name": "Bachelors Degree",
 			"at": "University of Nottingham",
 			"start": 2010,
 			"end": 2013,
-			"content": "university.md",
+			"content": "content/university.md",
 			"results": {
 				"Mathematics BSc (Hons)": "2.1"
 			}
@@ -70,20 +70,25 @@
 			"start": 2018,
 			"end": "current",
 			"role": "Software Engineer",
-			"content": ""
+			"content": "content/"
 		},
 		{
 			"name": "PET-Xi",
 			"start": 2015,
 			"end": 2018,
 			"role": "Subject Expert",
-			"content": ""
+			"content": "content/"
 		}
 	],
 	"sideProjects": [
-		{ "name": "cv", "repo": "", "url": "", "content": "" },
-		{ "name": "@cj09/css", "repo": "", "url": "", "content": "" },
-		{ "name": "Online Lingo", "repo": "", "url": "", "content": "" },
-		{ "name": "Board Game Server", "repo": "", "url": "", "content": "" }
+		{ "name": "cv", "repo": "", "url": "", "content": "content/" },
+		{ "name": "@cj09/css", "repo": "", "url": "", "content": "content/" },
+		{ "name": "Online Lingo", "repo": "", "url": "", "content": "content/" },
+		{
+			"name": "Board Game Server",
+			"repo": "",
+			"url": "",
+			"content": "content/"
+		}
 	]
 }
