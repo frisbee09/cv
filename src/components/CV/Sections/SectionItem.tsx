@@ -28,7 +28,7 @@ const StyledItemWrapper = styled.div`
 			margin-top: 0px;
 			margin-bottom: 5px;
 
-			/* Small and italic with the same coloring */
+			/* Small and italic with the same colouring */
 			font-size: 0.85rem;
 			font-style: italic;
 		}
