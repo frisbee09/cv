@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CVGrid, LeftColumn, ProfilePicture } from './Structure';
+import { CVGrid, BioAndStats, ProfilePicture } from './Structure';
 import CVHeader from './Header';
 import CVBody from './Body';
 
@@ -10,7 +10,7 @@ const CV: React.FunctionComponent<ICVProps> = props => {
 		<CVGrid>
 			<ProfilePicture />
 			<CVHeader />
-			<LeftColumn />
+			<BioAndStats />
 			<CVBody />
 		</CVGrid>
 	);

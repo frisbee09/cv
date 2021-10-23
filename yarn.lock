@@ -5565,6 +5565,7 @@ __metadata:
     react-markdown: ^7.1.0
     react-scripts: 4.0.3
     styled-components: ^5.3.0
+    styled-media-query: ^2.1.2
     typescript: ^4.3.5
     web-vitals: ^1.0.1
   languageName: unknown
@@ -14980,6 +14981,15 @@ resolve@1.18.1:
     react-dom: ">= 16.8.0"
     react-is: ">= 16.8.0"
   checksum: 1f94f92b5dab0b0a965646079604c184e9ef31fd0546881408039a5b4d9a4ebe73b6bb62b05912f06b68392352f1fed4c2dd66a74888b2446226aa0105b681c9
+  languageName: node
+  linkType: hard
+
+"styled-media-query@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "styled-media-query@npm:2.1.2"
+  peerDependencies:
+    styled-components: ">= 1"
+  checksum: 065dd0c4b88491480da43a93677e4707e5749597dac12a2cf696348268a23f4583a57ab25b3a04bfb318a587094ee3c878620cdf76eade7552ed7fe02668fdea
   languageName: node
   linkType: hard
 

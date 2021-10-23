@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import mediaQuery from '../mediaQuery';
 import headshot from './Headshot.jpg';
 
 const PROFILE_PICTURE_SIZE = 200;
@@ -7,6 +8,8 @@ const TOP_LEVEL_CV_PADDING = 15;
 
 const PROFILE_PICTURE_TOP_PADDING =
 	GRID_BANNER_HEIGHT - PROFILE_PICTURE_SIZE / 2;
+
+const SMALL_IMAGE_SIZE = GRID_BANNER_HEIGHT - 2 * PROFILE_PICTURE_TOP_PADDING;
 
 export const ProfilePicture = styled.img.attrs(() => {
 	return { src: headshot };
@@ -22,9 +25,22 @@ export const ProfilePicture = styled.img.attrs(() => {
 
 	filter: contrast(1.02);
 
-	position: sticky;
-	top: ${PROFILE_PICTURE_TOP_PADDING}px;
+	${mediaQuery.greaterThan('tablet')`
+		position: sticky;
+		top: ${PROFILE_PICTURE_TOP_PADDING}px;
+	`}
 	z-index: 2;
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+	justify-self: center;
+	${mediaQuery.lessThan('tablet')`
+		grid-row: 1 / 2;
+		grid-column: 1 / -1;
+		justify-self: left;
+		margin: ${PROFILE_PICTURE_TOP_PADDING}px;
+		height: ${SMALL_IMAGE_SIZE}px;
+		width: ${SMALL_IMAGE_SIZE}px;
+	`}
 `;
 
 const GRID_COLUMN_DEFINITION = css`
@@ -35,7 +51,7 @@ export const CVGrid = styled.div`
 	margin: auto;
 	max-width: 1000px;
 	height: 100%;
-	> * {
+	> *:not(img) {
 		padding: ${TOP_LEVEL_CV_PADDING}px;
 	}
 
@@ -58,12 +74,10 @@ export const CVGrid = styled.div`
 		-webkit-print-color-adjust: exact;
 	}
 
-	${ProfilePicture} {
-		padding: 0;
-		grid-row: 1 / 2;
-		grid-column: 1 / 2;
-		justify-self: center;
-	}
+	${mediaQuery.lessThan('tablet')`
+		grid-template-columns: 1fr;
+		grid-template-rows: ${GRID_BANNER_HEIGHT}px ${2 * GRID_BANNER_HEIGHT}px 1fr;
+	`}
 `;
 
 /**
@@ -116,11 +130,19 @@ export const HeaderContentWrapper = styled.div`
 export const BodyWrapper = styled.div`
 	grid-row: 2;
 	grid-column: 2;
+	${mediaQuery.lessThan('tablet')`
+		grid-row: 3;
+		grid-column: 1 / -1;
+	`}
 `;
 
-export const LeftColumn = styled.div`
+export const BioAndStats = styled.div`
 	grid-row: 1 / -1;
 	grid-column: 1 / 2;
+	${mediaQuery.lessThan('tablet')`
+		grid-row: 2 / 3;
+		grid-column: 1 / -1;
+	`}
 	background: ${props =>
 		props.theme.background
 			.override({ l: props.theme.background.l - 5 })

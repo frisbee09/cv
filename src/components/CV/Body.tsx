@@ -15,7 +15,7 @@ const CVBody: React.FunctionComponent<ICVBodyProps> = props => {
 			{experience.map((e: CVItem) => (
 				<SectionItem {...e} tagline={e.at} key={e.name} />
 			))}
-			<h2>Side Hustle</h2>
+			<h2>Side projects</h2>
 			{sideProjects.map((e: SideProject) => (
 				<SectionItem {...e} tagline={e.repo} key={e.name}>
 					{/* <a href={e.url}>{e.repo}</a> */}
