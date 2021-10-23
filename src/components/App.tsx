@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import CV from './CV';
-import { GunmetalTheme } from './theme';
+import { GunmetalTheme, MidnightBlueTheme } from './theme';
 
 interface IAppProps {}
 
