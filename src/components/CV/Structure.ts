@@ -25,21 +25,19 @@ export const ProfilePicture = styled.img.attrs(() => {
 
 	filter: contrast(1.02);
 
-	${mediaQuery.greaterThan('tablet')`
-		position: sticky;
-		top: ${PROFILE_PICTURE_TOP_PADDING}px;
-	`}
+	position: sticky;
+	top: ${PROFILE_PICTURE_TOP_PADDING}px;
+
 	z-index: 2;
+
 	grid-row: 1 / 2;
 	grid-column: 1 / 2;
 	justify-self: center;
 	${mediaQuery.lessThan('tablet')`
-		grid-row: 1 / 2;
-		grid-column: 1 / -1;
-		justify-self: left;
 		margin: ${PROFILE_PICTURE_TOP_PADDING}px;
 		height: ${SMALL_IMAGE_SIZE}px;
 		width: ${SMALL_IMAGE_SIZE}px;
+		justify-self: start;
 	`}
 `;
 
@@ -50,7 +48,7 @@ const GRID_COLUMN_DEFINITION = css`
 export const CVGrid = styled.div`
 	margin: auto;
 	max-width: 1000px;
-	height: 100%;
+	min-height: 100%;
 	> *:not(img) {
 		padding: ${TOP_LEVEL_CV_PADDING}px;
 	}
@@ -75,8 +73,13 @@ export const CVGrid = styled.div`
 	}
 
 	${mediaQuery.lessThan('tablet')`
-		grid-template-columns: 1fr;
+		grid-template-columns: 100%;
 		grid-template-rows: ${GRID_BANNER_HEIGHT}px ${2 * GRID_BANNER_HEIGHT}px 1fr;
+
+		// Bring everything in to the same column
+		&& > * { 
+			grid-column: 1 / -1;
+		}
 	`}
 `;
 
@@ -86,27 +89,24 @@ export const CVGrid = styled.div`
 export const HeaderWrapper = styled.div`
 	grid-row: 1;
 	grid-column: 1 / -1;
-	display: grid;
-	min-height: 0;
-
-	align-items: start;
-
-	${GRID_COLUMN_DEFINITION};
-	grid-template-areas: 'bannerPlaceholder content';
-
 	background: ${props => props.theme.foreground.getHexA()};
 
 	position: sticky;
 	top: 0;
 	/* Fix for <hr> going over the sticky div */
 	z-index: 1;
+
+	${mediaQuery.lessThan('tablet')`
+		grid-template-columns: 1fr;
+	`}
 `;
 
 /**
  * Wrapper that decides positioning of the content (name, tagline etc)
  */
 export const HeaderContentWrapper = styled.div`
-	grid-area: content;
+	grid-row: 1 / 2;
+	grid-column: 2 / 3;
 
 	display: flex;
 	flex-direction: column;
@@ -120,11 +120,33 @@ export const HeaderContentWrapper = styled.div`
 		margin: 0;
 		letter-spacing: 10px;
 		font-weight: 500;
+		${mediaQuery.lessThan('tablet')`
+			letter-spacing: 5px;
+		`}
+	}
+	> p {
+		margin-top: 4px;
 	}
 	> hr {
-		width: 100px;
-		margin-left: 0;
+		width: 95%;
+		margin: 0;
 	}
+
+	height: ${GRID_BANNER_HEIGHT}px;
+	position: sticky;
+	top: 0;
+	/* Fix for <hr> going over the sticky div */
+	z-index: 1;
+
+	${mediaQuery.lessThan('tablet')`
+		& {
+			width: calc(100% - ${SMALL_IMAGE_SIZE + 2 * PROFILE_PICTURE_TOP_PADDING}px);
+		}
+		&& {
+			padding: 0;
+			margin-left: ${SMALL_IMAGE_SIZE + 2 * PROFILE_PICTURE_TOP_PADDING}px;
+		}
+	`}
 `;
 
 export const BodyWrapper = styled.div`
@@ -132,16 +154,17 @@ export const BodyWrapper = styled.div`
 	grid-column: 2;
 	${mediaQuery.lessThan('tablet')`
 		grid-row: 3;
-		grid-column: 1 / -1;
 	`}
 `;
 
-export const BioAndStats = styled.div`
-	grid-row: 1 / -1;
+export const BioAndStatsWrapper = styled.div`
+	grid-row: 2 / -1;
 	grid-column: 1 / 2;
+	&& {
+		padding-top: ${TOP_LEVEL_CV_PADDING + PROFILE_PICTURE_SIZE / 2}px;
+	}
 	${mediaQuery.lessThan('tablet')`
 		grid-row: 2 / 3;
-		grid-column: 1 / -1;
 	`}
 	background: ${props =>
 		props.theme.background

@@ -10,15 +10,15 @@ interface ICVHeaderProps {}
 
 const CVHeader: React.FunctionComponent<ICVHeaderProps> = props => {
 	return (
-		<HeaderWrapper>
+		<>
+			<HeaderWrapper />
+			<ProfilePicture />
 			<HeaderContentWrapper>
 				<h1>{details.name}</h1>
 				<hr />
-				<div>
-					<p>{details.tagline}</p>
-				</div>
+				<p>{details.tagline}</p>
 			</HeaderContentWrapper>
-		</HeaderWrapper>
+		</>
 	);
 };
 
