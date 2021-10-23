@@ -11,15 +11,13 @@ const GS = createGlobalStyle`
     * {
       box-sizing: border-box;
     }
+    min-height: 100vh;
   }
   body {
-    height: 100vh;
-    width: 100vw;
     color: ${props => props.theme.text.getHexA()};
 
     #root {
-      height: 100%;
-      width: 100%;
+      min-height: 100%;
     }
 
     /* Set the default 1rem font size to 14px */

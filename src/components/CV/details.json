@@ -89,27 +89,27 @@
 	"sideProjects": [
 		{
 			"name": "cv",
-			"repo": "",
+			"repo": "frisbee09/cv",
 			"url": "",
-			"contentFile": "content/hobbies/cv.md"
+			"contentFile": "content/sideProjects/cv.md"
 		},
 		{
-			"name": "@cj09/css",
-			"repo": "",
+			"name": "CSS Helper Library",
+			"repo": "frisbee09/css",
 			"url": "",
-			"contentFile": "content/hobbies/css.md"
+			"contentFile": "content/sideProjects/css.md"
 		},
 		{
 			"name": "Online Lingo",
-			"repo": "",
+			"repo": "frisbee09/online_lingo",
 			"url": "",
-			"contentFile": "content/hobbies/onlineLingo.md"
+			"contentFile": "content/sideProjects/onlineLingo.md"
 		},
 		{
 			"name": "Board Game Server",
-			"repo": "",
+			"repo": "frisbee09/simple_websocket",
 			"url": "",
-			"contentFile": "content/"
+			"contentFile": "content/sideProjects/boardGameServer.md"
 		}
 	]
 }

@@ -34,6 +34,9 @@ export const HeaderWrapper = styled.div`
 	grid-template-areas: 'bannerPlaceholder content';
 
 	background: ${props => props.theme.foreground.getHexA()};
+
+	position: sticky;
+	top: 0;
 `;
 
 /**

@@ -1,0 +1,1 @@
+One holiday season, my family and I were all hooked playing Lingo alongside contestants on TV, so I whipped up a webapp in a couple days to do something similar. It uses a free words API to request a word, which you can easily see in the network requests panel if you fancy cheating yourself out of some fun.

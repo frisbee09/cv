@@ -15,7 +15,7 @@ const StyledItemWrapper = styled.div`
 		/* A negative bottom margin nests the tagline underneath */
 		margin-bottom: -3px;
 		&,
-		~ .location {
+		~ .tagline {
 			color: ${SECTION_ITEM_ACCENT};
 		}
 		> .name,
@@ -24,7 +24,7 @@ const StyledItemWrapper = styled.div`
 		}
 
 		/* The tagline CSS */
-		~ .location {
+		~ .tagline {
 			margin-top: 0px;
 			margin-bottom: 5px;
 
@@ -35,20 +35,35 @@ const StyledItemWrapper = styled.div`
 	}
 
 	.content {
+		h1,
+		h2,
+		h3,
+		h4,
+		ul,
+		ol {
+			margin: 10px 0;
+		}
+
+		ol,
+		ul {
+			margin-left: 0;
+			padding-left: 17px;
+		}
 	}
 
 	hr {
 		border-color: ${props => props.theme.text.getHexA()};
 		opacity: 0.5;
+		margin: 10px 0;
 	}
 `;
 
 interface ISectionItemProps {
 	className?: string;
 	name: React.ReactNode;
-	start: React.ReactNode;
-	end: React.ReactNode;
-	at: React.ReactNode;
+	start?: React.ReactNode;
+	end?: React.ReactNode;
+	tagline?: React.ReactNode;
 	contentFile?: string;
 }
 
@@ -69,7 +84,7 @@ const SectionItem: React.FC<ISectionItemProps> = ({
 	name,
 	start,
 	end,
-	at,
+	tagline,
 	contentFile,
 	children,
 }) => {
@@ -77,11 +92,14 @@ const SectionItem: React.FC<ISectionItemProps> = ({
 		<StyledItemWrapper className={className}>
 			<h3 className="header">
 				<span className="name">{name}</span>
-				<span className="time">
-					{start} - {end}
-				</span>
+				{(start || end) && (
+					<span className="time">
+						{start}
+						{end && `- ${end}`}
+					</span>
+				)}
 			</h3>
-			<p className="location">{at}</p>
+			<p className="tagline">{tagline}</p>
 			<div className="content">
 				{children}
 				{contentFile && <RenderMarkdownFile file={contentFile} />}

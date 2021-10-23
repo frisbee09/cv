@@ -1,0 +1,1 @@
+After losing my previous CV in a hard drive failure, I recreated it as a React app in the hope that GitHub has more stability than an old hard disk. Fun fact, this consumes my `@cj09/css` package to create the theming objects.

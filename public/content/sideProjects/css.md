@@ -1,0 +1,1 @@
+The CSS project is a small package of helpers I find useful when using a theming object. Instead of wrestling with a theme with ten different shades per colour, a Colour class allows you to save a definition of a colour and re-export it in HSLA/RGBA/Hex.

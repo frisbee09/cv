@@ -1,5 +1,5 @@
-# Highlights
-
-* First professional software engineering role and promoted within 8 months from junior to mid
-* Being lead designer for 7 projects, including a total redesign of the customer content platform
-* 
+- Leading UI design for 7 projects, including a total redesign of the customer content platform
+- Naturally falling into the UI design lead, UX design lead roles in our small team of devs
+- Revolutionising our UI delivery architecture, implementing micro-frontends using Webpack Module Federation, utilising AWS Step Functions to automate build and release of our applications
+- Designing and maintaining features across multiple MERN and SERN stack micro-services
+- Developing a wind data microservice, performing statistical analysis of wind data and shifting the data set to match client given target parameters using a variety of methodologies in Python

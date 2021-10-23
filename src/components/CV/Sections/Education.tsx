@@ -1,6 +1,5 @@
 import * as React from 'react';
-import styled, { css } from 'styled-components';
-import RenderMarkdownFile from '../RenderMarkdown';
+import styled from 'styled-components';
 import SectionItem from './SectionItem';
 const details = require('../details.json');
 
@@ -25,10 +24,11 @@ const EducationResults = styled.div`
 const EducationItem: React.FunctionComponent<IEducationItemProps> = ({
 	contentFile,
 	results,
+	at,
 	...rest
 }) => {
 	return (
-		<SectionItem {...rest} contentFile={contentFile}>
+		<SectionItem {...rest} tagline={at} contentFile={contentFile}>
 			<EducationResults>
 				{results &&
 					Object.entries(results).map(r => (
