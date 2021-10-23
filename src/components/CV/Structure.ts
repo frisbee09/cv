@@ -8,6 +8,7 @@ export const CVGrid = styled.div`
 		padding: 15px;
 	}
 
+	background: ${props => props.theme.background.getHexA()};
 	border-left-style: solid;
 	border-right-style: solid;
 	border-width: 1px;
@@ -19,7 +20,12 @@ export const CVGrid = styled.div`
 
 	display: grid;
 	grid-template-rows: auto 1fr;
-	grid-template-columns: minmax(350px, 30%) minmax(0, 1fr);
+	grid-template-columns: minmax(300px, 30%) minmax(0, 1fr);
+
+	&,
+	* {
+		-webkit-print-color-adjust: exact;
+	}
 `;
 
 /**

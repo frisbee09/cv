@@ -6,6 +6,10 @@ import { GunmetalTheme } from './theme';
 interface IAppProps {}
 
 const GS = createGlobalStyle`
+html {
+  /* Set the default 1rem font size to 12px */
+  font-size: ${(12 * 100) / 16}%;
+}
   html, body {
     background: ${props => props.theme.background.getHexA()};
     * {
@@ -20,8 +24,6 @@ const GS = createGlobalStyle`
       min-height: 100%;
     }
 
-    /* Set the default 1rem font size to 14px */
-    font-size: ${(14 * 100) / 16}%;
   }
 `;
 

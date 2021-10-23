@@ -10,9 +10,6 @@ const CV: React.FunctionComponent<ICVProps> = props => {
 	return (
 		<CVGrid>
 			<CVHeader />
-			<LeftColumn>
-				<ProfilePicture src={CJHeadshot} />
-			</LeftColumn>
 			<CVBody />
 		</CVGrid>
 	);
