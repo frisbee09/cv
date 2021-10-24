@@ -47,14 +47,18 @@ const StyledItemWrapper = styled.div`
 		ol,
 		ul {
 			margin-left: 0;
-			padding-left: 17px;
+			padding-left: 15px;
 		}
 	}
 
 	hr {
 		border-color: ${props => props.theme.text.getHexA()};
+		/* Fill these in just for slight rendering issues that can cause them to
+		look larger than 2px */
+		background: ${props => props.theme.text.getHexA()};
 		opacity: 0.5;
 		margin: 10px 0;
+		height: 0px;
 	}
 `;
 

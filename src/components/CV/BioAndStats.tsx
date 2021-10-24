@@ -6,6 +6,7 @@ import { BioAndStatsWrapper } from './Structure';
 const details = require('./details.json');
 const skills: { [key: string]: string[] } = details.skills;
 const hobbies: { [key: string]: string[] } = details.hobbies;
+const personal = require('./personal.json');
 
 interface IBioAndStatsProps {}
 
@@ -60,6 +61,13 @@ const SkillsList = styled.div`
 const BioAndStats: React.FunctionComponent<IBioAndStatsProps> = props => {
 	return (
 		<BioAndStatsWrapper>
+			<h3>Stats</h3>
+			<SkillsList>
+				<div>✉️ {personal.email}</div>
+				<div>🌍 {personal.location}</div>
+				<div>🎂 {personal.age}</div>
+				<div>☎️ {personal.tel}</div>
+			</SkillsList>
 			<RenderMarkdownFile file="content/bio.md" />
 			<h3>Skills</h3>
 			<SkillsList>

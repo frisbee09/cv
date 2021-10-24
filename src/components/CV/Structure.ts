@@ -156,15 +156,13 @@ export const BodyWrapper = styled.div`
 export const BioAndStatsWrapper = styled.div`
 	grid-row: 2 / -1;
 	grid-column: 1 / 2;
-	${mediaQuery.greaterThan('tablet')`
-		&& {
-			/* Padding top to get out from under my cheeky grin */
-			padding-top: ${PROFILE_PICTURE_SIZE / 2}px;
-		}
-	`}
+	/* Padding top to get out from under my cheeky grin */
+	padding-top: ${PROFILE_PICTURE_SIZE / 2}px;
+
 	${mediaQuery.lessThan('tablet')`
 		grid-row: 2 / 3;
 		padding-bottom: ${TOP_LEVEL_CV_PADDING}px;
+		padding-top: 0px;
 	`}
 	background: ${props =>
 		props.theme.background
