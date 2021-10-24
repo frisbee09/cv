@@ -95,7 +95,7 @@ const SectionItem: React.FC<ISectionItemProps> = ({
 				{(start || end) && (
 					<span className="time">
 						{start}
-						{end && `- ${end}`}
+						{end && ` - ${end}`}
 					</span>
 				)}
 			</h3>

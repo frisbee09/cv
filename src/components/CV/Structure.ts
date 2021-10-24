@@ -3,7 +3,7 @@ import mediaQuery from '../mediaQuery';
 import headshot from './Headshot.jpg';
 
 const PROFILE_PICTURE_SIZE = 200;
-const GRID_BANNER_HEIGHT = 110;
+export const GRID_BANNER_HEIGHT = 110;
 const TOP_LEVEL_CV_PADDING = 15;
 
 const PROFILE_PICTURE_TOP_PADDING =
@@ -50,7 +50,8 @@ export const CVGrid = styled.div`
 	max-width: 1000px;
 	min-height: 100%;
 	> *:not(img) {
-		padding: ${TOP_LEVEL_CV_PADDING}px;
+		padding-left: ${TOP_LEVEL_CV_PADDING}px;
+		padding-right: ${TOP_LEVEL_CV_PADDING}px;
 	}
 
 	background: ${props => props.theme.background.getHexA()};
@@ -67,14 +68,9 @@ export const CVGrid = styled.div`
 	grid-template-rows: ${GRID_BANNER_HEIGHT}px 1fr;
 	${GRID_COLUMN_DEFINITION};
 
-	&,
-	* {
-		-webkit-print-color-adjust: exact;
-	}
-
 	${mediaQuery.lessThan('tablet')`
 		grid-template-columns: 100%;
-		grid-template-rows: ${GRID_BANNER_HEIGHT}px ${2 * GRID_BANNER_HEIGHT}px 1fr;
+		grid-template-rows: ${GRID_BANNER_HEIGHT}px minmax(0, auto) auto;
 
 		// Bring everything in to the same column
 		&& > * { 
@@ -160,11 +156,15 @@ export const BodyWrapper = styled.div`
 export const BioAndStatsWrapper = styled.div`
 	grid-row: 2 / -1;
 	grid-column: 1 / 2;
-	&& {
-		padding-top: ${TOP_LEVEL_CV_PADDING + PROFILE_PICTURE_SIZE / 2}px;
-	}
+	${mediaQuery.greaterThan('tablet')`
+		&& {
+			/* Padding top to get out from under my cheeky grin */
+			padding-top: ${PROFILE_PICTURE_SIZE / 2}px;
+		}
+	`}
 	${mediaQuery.lessThan('tablet')`
 		grid-row: 2 / 3;
+		padding-bottom: ${TOP_LEVEL_CV_PADDING}px;
 	`}
 	background: ${props =>
 		props.theme.background

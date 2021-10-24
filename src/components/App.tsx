@@ -12,6 +12,10 @@ const GS = createGlobalStyle`
   }
   html, body {
     background: ${props => props.theme.background.getHexA()};
+    &,
+    * {
+      -webkit-print-color-adjust: exact;
+    }
     * {
       box-sizing: border-box;
     }
