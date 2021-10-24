@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import mediaQuery from '../mediaQuery';
 import RenderMarkdownFile from './RenderMarkdown';
 import { BioAndStatsWrapper } from './Structure';
 const details = require('./details.json');
@@ -10,27 +11,48 @@ interface IBioAndStatsProps {}
 
 const SkillsList = styled.div`
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
-
-	max-height: 100px;
 	min-height: 0;
 
 	align-items: flex-start;
 
 	> div {
-		padding: 3px 10px;
-		margin: 5px 5px;
+		padding: 5px 10px;
+		margin-bottom: 5px;
+		margin-right: 5px;
 		border-radius: 3px;
+
+		border: 1px solid
+			${props => props.theme.foreground.override({ s: 15, l: 25 }).getHexA()};
+
+		// Default background for items rendered here
+		background: ${props =>
+			props.theme.confirm
+				.override({
+					s: 15,
+					l: 10,
+					a: 0.6,
+				})
+				.getHexA()};
 		&.proficiencies {
 			background: ${props =>
-				props.theme.foreground.override({ h: 80 }).getHexA()};
+				props.theme.confirm
+					.override({
+						s: props.theme.confirm.s + 10,
+						l: props.theme.confirm.l - 10,
+						a: 0.75,
+					})
+					.getHexA()};
 		}
 		&.experienceWith {
 			background: ${props =>
-				props.theme.foreground.override({ s: 55 }).getHexA()};
-		}
-		&.otherLanguages {
+				props.theme.confirm
+					.override({
+						s: props.theme.confirm.s - 10,
+						l: props.theme.confirm.l + 10,
+						a: 0.6,
+					})
+					.getHexA()};
 		}
 	}
 `;

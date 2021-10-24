@@ -15,8 +15,6 @@ const GS = createGlobalStyle`
     &,
     * {
       -webkit-print-color-adjust: exact;
-    }
-    * {
       box-sizing: border-box;
     }
     min-height: 100vh;
@@ -28,6 +26,19 @@ const GS = createGlobalStyle`
       min-height: 100%;
     }
 
+    /* Just a little tighter on the margin-bottoms. I prefer headings to be
+    slightly weighted towards the content underneath them */
+    h2 {
+      margin-bottom: 0.8rem;
+    }
+    h3 {
+      margin-bottom: 0.75rem;
+    }
+    h2, h3 {
+      & + * {
+        margin-top: 0;
+      }
+    }
   }
 `;
 

@@ -1627,10 +1627,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cj09/css@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "@cj09/css@npm:1.4.0"
-  checksum: 1c56be530a6c74788331e3f89ba43019ecb5ffa8ce16ac1a37f80fce76dcbaa15054b3584722d57965e5c9050b2634fa1ff932ca106b6d87d7b397f55137cc84
+"@cj09/css@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@cj09/css@npm:1.4.1"
+  checksum: d29519e7922417815c8e91b94edd2d22e85251a526ef9a92a80a3e4731c53f6280224681ec951c799ac083601c039751d3f4a2517e2dea7cd617bd71199267a8
   languageName: node
   linkType: hard
 
@@ -5536,7 +5536,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cv@workspace:."
   dependencies:
-    "@cj09/css": ^1.4.0
+    "@cj09/css": ^1.4.1
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10

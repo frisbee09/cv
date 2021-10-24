@@ -1,6 +1,10 @@
 {
 	"name": "Chris Johnstone",
 	"tagline": "Full Stack Web Developer",
+	"socials": {
+		"linkedIn": "chrisjohnstone09",
+		"github": "frisbee09"
+	},
 	"skills": {
 		"proficiencies": [
 			"TypeScript",
@@ -15,8 +19,8 @@
 			"Mongoose",
 			"Jest"
 		],
-		"experienceWith": ["AWS", "MongoDB", "SQL", "Git", "Babel"],
-		"otherLanguages": ["Python", "HTML5", "CSS3"]
+		"experienceWith": ["AWS", "Python", "MongoDB", "SQL"],
+		"otherLanguages": ["Git", "Babel", "HTML5", "CSS3"]
 	},
 	"hobbies": {
 		"creative": ["🎭 Performing Arts", "📸 Photography", "🎥 Cinematography"],
