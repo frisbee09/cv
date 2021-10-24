@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { CVItem, SideProject } from './DetailsTypes';
+import RenderMarkdownFile from './RenderMarkdown';
 import Education from './Sections/Education';
 import SectionItem from './Sections/SectionItem';
 import { BodyWrapper } from './Structure';
@@ -11,17 +12,13 @@ interface ICVBodyProps {}
 const CVBody: React.FunctionComponent<ICVBodyProps> = props => {
 	return (
 		<BodyWrapper>
-			<h2>Experience</h2>
-			{experience.map((e: CVItem) => (
-				<SectionItem {...e} tagline={e.at} key={e.name} />
-			))}
-			<h2>Side projects</h2>
-			{sideProjects.map((e: SideProject) => (
-				<SectionItem {...e} tagline={e.repo} key={e.name}>
-					{/* <a href={e.url}>{e.repo}</a> */}
-				</SectionItem>
-			))}
-			<Education />
+			<h2>Supporting Statement</h2>
+			<SectionItem
+				name="Full stack web developer (Python and React)"
+				tagline="Nuffield Department of Primary Care Health Sciences"
+				contentFile="content/coverLetters/ou-full-stack-oct-2021.md"
+			/>
+			<div><p>Chris Johnstone</p></div>
 		</BodyWrapper>
 	);
 };

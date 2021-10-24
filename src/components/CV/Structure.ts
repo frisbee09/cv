@@ -48,7 +48,7 @@ const GRID_COLUMN_DEFINITION = css`
 export const CVGrid = styled.div`
 	margin: auto;
 	max-width: 1000px;
-	min-height: 100%;
+	min-height: 100vh;
 	> *:not(img) {
 		padding-left: ${TOP_LEVEL_CV_PADDING}px;
 		padding-right: ${TOP_LEVEL_CV_PADDING}px;
@@ -151,6 +151,9 @@ export const BodyWrapper = styled.div`
 	${mediaQuery.lessThan('tablet')`
 		grid-row: 3;
 	`}
+	hr:last-of-type {
+		display: none;
+	}
 `;
 
 export const BioAndStatsWrapper = styled.div`
