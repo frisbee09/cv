@@ -1,13 +1,19 @@
 {
-	"search.exclude": {
-		"**/.yarn": true,
-		"**/.pnp.*": true,
-		"**/docs/*": true
-	},
-	"eslint.nodePath": ".yarn/sdks",
-	"typescript.tsdk": ".yarn/sdks/typescript/lib",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
-	"prettier.prettierPath": ".yarn/sdks/prettier/index.js",
-	"cSpell.words": ["Headshot", "MERN", "RGBA", "SERN", "tagline"],
-	"git.ignoreLimitWarning": true
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true,
+    "**/docs/*": true
+  },
+  "eslint.nodePath": ".yarn/sdks",
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+  "cSpell.words": [
+    "Headshot",
+    "MERN",
+    "RGBA",
+    "SERN",
+    "tagline"
+  ],
+  "git.ignoreLimitWarning": true
 }

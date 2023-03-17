@@ -153,13 +153,46 @@ export const BodyWrapper = styled.div`
 	`}
 `;
 
+export const BodySection = styled.section`
+	/* Prevent the margin collapse so we get a nice background alternation*/
+	padding-top: 1px;
+	padding-bottom: ${TOP_LEVEL_CV_PADDING}px;
+
+	&:nth-child(2n) {
+		background: ${props =>
+			props.theme.background
+				.override({
+					l: props.theme.background.l - 3,
+					s: props.theme.background.s + 4,
+				})
+				.getHexA()};
+
+		margin-left: -${TOP_LEVEL_CV_PADDING}px;
+		margin-right: -${TOP_LEVEL_CV_PADDING}px;
+
+		padding-left: ${TOP_LEVEL_CV_PADDING}px;
+		padding-right: ${TOP_LEVEL_CV_PADDING}px;
+	}
+`;
+
 export const BioAndStatsWrapper = styled.div`
 	grid-row: 2 / -1;
 	grid-column: 1 / 2;
+
+	position: sticky;
+	top: ${GRID_BANNER_HEIGHT}px;
+	height: calc(100vh - ${GRID_BANNER_HEIGHT}px);
+	/* Fix for <hr> going over the sticky div */
+	z-index: 1;
+
 	/* Padding top to get out from under my cheeky grin */
 	padding-top: ${PROFILE_PICTURE_SIZE / 2}px;
 
 	${mediaQuery.lessThan('tablet')`
+		height: unset;
+		position: unset;
+		z-index: unset;
+		
 		grid-row: 2 / 3;
 		padding-bottom: ${TOP_LEVEL_CV_PADDING}px;
 		padding-top: 0px;

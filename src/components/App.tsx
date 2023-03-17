@@ -39,6 +39,10 @@ const GS = createGlobalStyle`
         margin-top: 0;
       }
     }
+
+    hr {
+      z-index: 0;
+    }
   }
 `;
 
