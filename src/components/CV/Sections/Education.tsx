@@ -32,7 +32,7 @@ const EducationItem: React.FunctionComponent<IEducationItemProps> = ({
 			<EducationResults>
 				{results &&
 					Object.entries(results).map(r => (
-						<span>
+						<span key={r[0]}>
 							{r[0]} ({r[1]})
 						</span>
 					))}

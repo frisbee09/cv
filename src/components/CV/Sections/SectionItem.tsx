@@ -17,6 +17,9 @@ const StyledItemWrapper = styled.div`
 		&,
 		~ .tagline {
 			color: ${SECTION_ITEM_ACCENT};
+			a {
+				color: ${SECTION_ITEM_ACCENT};
+			}
 		}
 		> .name,
 		> .time {
@@ -101,6 +104,7 @@ interface ISectionItemProps {
 	start?: React.ReactNode;
 	end?: React.ReactNode;
 	tagline?: React.ReactNode;
+	url?: string;
 	contentFile?: string;
 }
 
@@ -116,12 +120,13 @@ interface ISectionItemProps {
  * @param props
  * @returns
  */
-const SectionItem: React.FC<ISectionItemProps> = ({
+const SectionItem: React.FC<React.PropsWithChildren<ISectionItemProps>> = ({
 	className,
 	name,
 	start,
 	end,
 	tagline,
+	url,
 	contentFile,
 	children,
 }) => {
@@ -136,7 +141,15 @@ const SectionItem: React.FC<ISectionItemProps> = ({
 					</span>
 				)}
 			</h3>
-			<p className="tagline">{tagline}</p>
+			<p className="tagline">
+				{tagline}
+				{url ? (
+					<>
+						<span> @ </span>
+						<a href={url}>{url}</a>
+					</>
+				) : undefined}
+			</p>
 			<div className="content">
 				{children}
 				{contentFile && <RenderMarkdownFile file={contentFile} />}
