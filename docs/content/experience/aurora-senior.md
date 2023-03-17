@@ -1,0 +1,5 @@
+- Current development lead for Origin, running a small scrum team of developers
+  - Distilling technical requirements and making technical design decisions
+  - Cross team co-ordination and alignment, responsible for short and long term resourcing and planning
+- Coordinating a large scale automation of some low-efficiency internal processes to realise daily forecasts from our current quarterly model
+- Actively developing our onboarding and knowledge sharing efforts as the team grows
