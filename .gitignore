@@ -10,6 +10,7 @@
 
 # production
 /build
+/.yarn/unplugged
 
 # misc
 .DS_Store
