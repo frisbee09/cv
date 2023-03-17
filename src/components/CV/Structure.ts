@@ -112,16 +112,17 @@ export const HeaderContentWrapper = styled.div`
 
 	text-transform: uppercase;
 
-	> h1 {
+	> .name {
 		margin: 0;
-		letter-spacing: 10px;
+		letter-spacing: 5px;
 		font-weight: 500;
 		${mediaQuery.lessThan('tablet')`
 			letter-spacing: 5px;
 		`}
 	}
-	> p {
+	> .tag {
 		margin-top: 4px;
+		font-weight: 500;
 	}
 	> hr {
 		width: 95%;
