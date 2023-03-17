@@ -35,6 +35,7 @@ const StyledItemWrapper = styled.div`
 	}
 
 	.content {
+		/* Standard margin */
 		h1,
 		h2,
 		h3,
@@ -44,10 +45,35 @@ const StyledItemWrapper = styled.div`
 			margin: 10px 0;
 		}
 
+		/* Reset user agent on p tags */
+		p {
+			margin: 0;
+			margin-top: 10px;
+		}
+
 		ol,
 		ul {
 			margin-left: 0;
 			padding-left: 15px;
+
+			/* List item siblings and nested lists also need a reduced margin  */
+			li,
+			li > ul,
+			li > ol {
+				margin: 3px 0;
+			}
+		}
+
+		/* p tags that go into lists, nest them slightly as looks visually related */
+		p ~ ol,
+		p ~ ul {
+			margin-top: 3px;
+		}
+
+		/* Giving visual acuity to code monospace */
+		code {
+			width: 100%;
+			filter: contrast(40%);
 		}
 	}
 
@@ -59,6 +85,13 @@ const StyledItemWrapper = styled.div`
 		opacity: 0.5;
 		margin: 10px 0;
 		height: 0px;
+	}
+
+	/* The last hr on the last item in the section */
+	&:last-child > hr:last-child {
+		/* We have alternating background to distinguish sections, the final
+		<hr/> is no longer needed */
+		display: none;
 	}
 `;
 

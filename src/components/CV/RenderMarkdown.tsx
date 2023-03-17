@@ -24,9 +24,11 @@ const RenderMarkdownFile: React.FunctionComponent<IRenderMarkdownProps> = ({
 			try {
 				const mdResponse = await fetch(fileLoc).then(r => r.text());
 				setMd(mdResponse);
-			} catch (e) {
+			} catch (e: any) {
 				console.error(e);
-				setFail(e.message);
+				if (typeof e.message === 'string') {
+					setFail(e.message);
+				}
 			}
 		};
 

@@ -1,0 +1,3 @@
+A board game crept up on my radar but only shipped in the US, so I made a web application that did the same thing. Built on AWS Cloudfront and backed with a small AWS Lambda function, I'm flying well under the free tier limitations in AWS.
+
+The game is simple, you get a set of letters rolled out for you and you need to make a fully connected set of words. The application uses a quick network search to establish the words you've formed and pings them back to the server for verification. I have a half-baked implementation of a "lobby" available, allowing multiple people to play the same set of letters at the same time and race. For this there's a very light serverless MongoDB instance.

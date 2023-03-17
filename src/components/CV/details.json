@@ -70,17 +70,25 @@
 	],
 	"experience": [
 		{
+			"name": "Senior Software Engineer",
+			"at": "Aurora Energy Research",
+			"start": 2022,
+			"end": "current",
+			"contentFile": "content/experience/aurora-senior.md"
+		},
+		{
 			"name": "Software Engineer",
 			"at": "Aurora Energy Research",
 			"start": 2019,
-			"end": "current",
-			"contentFile": "content/experience/aurora.md"
+			"end": 2022,
+			"contentFile": "content/experience/aurora-mid.md"
 		},
 		{
 			"name": "Junior Software Engineer",
 			"at": "Aurora Energy Research",
 			"start": 2018,
-			"end": 2019
+			"end": 2019,
+			"contentFile": "content/experience/aurora-junior.md"
 		},
 		{
 			"name": "Subject Expert",
@@ -91,6 +99,18 @@
 		}
 	],
 	"sideProjects": [
+		{
+			"name": "home automation",
+			"repo": "",
+			"url": "",
+			"contentFile": "content/sideProjects/home-automation.md"
+		},
+		{
+			"name": "crosslett",
+			"repo": "frisbee09/crosslett",
+			"url": "https://crosslett.com",
+			"contentFile": "content/sideProjects/crosslett.md"
+		},
 		{
 			"name": "cv",
 			"repo": "frisbee09/cv",

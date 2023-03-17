@@ -14,9 +14,9 @@ const CVHeader: React.FunctionComponent<ICVHeaderProps> = props => {
 			<HeaderWrapper />
 			<ProfilePicture />
 			<HeaderContentWrapper>
-				<h1>{details.name}</h1>
+				<h1 className="name">{details.name}</h1>
 				<hr />
-				<p>{details.tagline}</p>
+				<h3 className="tag">{details.tagline}</h3>
 			</HeaderContentWrapper>
 		</>
 	);

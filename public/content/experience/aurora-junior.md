@@ -1,0 +1,3 @@
+- Naturally falling into the UI design lead, UX design lead roles in our small team of devs
+- Teasing out requirements from staff and translating those into technical solutions, managing releases, tracking QA and communicating changes to the business
+- Developing a wind data microservice, performing statistical analysis of wind data and shifting the data set to match client given target parameters using a variety of methodologies in Python
