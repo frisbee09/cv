@@ -1,5 +1,5 @@
 - Designing, planning and "product owning" our "model inputs" project, allowing users to interact with model assumptions through a web-based application. This then formed one of the key parts of Origin.
-- Revolutionising our UI delivery architecture, implementing micro-frontends and utilising AWS Step Functions to automate the testing, building and release of our applications
+- Revolutionising our UI delivery architecture, implementing micro-frontends through Webpack federated modules and utilising AWS Step Functions to automate the testing, build and release of our applications across our environments. This removed a bottleneck we were facing, allowing multiple UI deployments across our teams to occur in parallel.
 - Designing and maintaining features across multiple MERN and SERN stack micro-services
 - Leading UI design for 7 projects, including a total redesign of the platform that serves content to customers
 - Taking a role in recruiting the next set of front end devs
