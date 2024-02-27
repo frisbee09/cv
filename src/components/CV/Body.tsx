@@ -17,7 +17,7 @@ const CVBody: React.FunctionComponent<ICVBodyProps> = props => {
 					<SectionItem {...e} tagline={e.at} key={e.name} />
 				))}
 			</BodySection>
-			<BodySection>
+			<BodySection className="pagebreak">
 				<h2>Side projects</h2>
 				{sideProjects.map((e: SideProject) => (
 					<SectionItem {...e} tagline={e.repo} key={e.name}>
@@ -25,7 +25,7 @@ const CVBody: React.FunctionComponent<ICVBodyProps> = props => {
 					</SectionItem>
 				))}
 			</BodySection>
-			<BodySection>
+			<BodySection className="pagebreak">
 				<Education />
 			</BodySection>
 		</BodyWrapper>

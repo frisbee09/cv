@@ -5,6 +5,7 @@ import headshot from './Headshot.jpg';
 const PROFILE_PICTURE_SIZE = 200;
 export const GRID_BANNER_HEIGHT = 110;
 const TOP_LEVEL_CV_PADDING = 15;
+const COLUMN_MIN_IN_PX = 300;
 
 const PROFILE_PICTURE_TOP_PADDING =
 	GRID_BANNER_HEIGHT - PROFILE_PICTURE_SIZE / 2;
@@ -42,7 +43,7 @@ export const ProfilePicture = styled.img.attrs(() => {
 `;
 
 const GRID_COLUMN_DEFINITION = css`
-	grid-template-columns: minmax(300px, 30%) minmax(0, 1fr);
+	grid-template-columns: minmax(${COLUMN_MIN_IN_PX}px, 30%) minmax(0, 1fr);
 `;
 
 export const CVGrid = styled.div`
@@ -155,11 +156,35 @@ export const BodyWrapper = styled.div`
 `;
 
 export const BodySection = styled.section`
+	/* Page break for print */
+	@media print {
+		@page {
+			size: A4;
+		}
+		&.pagebreak {
+			// Start a new page if we see the classname
+			page-break-before: always;
+
+			// Move it over the sidebar on the left. Sticky doesn't work in print.
+			position: relative;
+			z-index: 1;
+			left: -${COLUMN_MIN_IN_PX}px;
+
+			// Make sure it fills the page
+			width: 100vw;
+			height: 100vh;
+
+			// Add padding to be in line with the spacing of the rest of the CV
+			padding: ${TOP_LEVEL_CV_PADDING}px;
+		}
+	}
+
 	/* Prevent the margin collapse so we get a nice background alternation*/
 	padding-top: 1px;
 	padding-bottom: ${TOP_LEVEL_CV_PADDING}px;
 
 	&:nth-child(2n) {
+		// Alternate the backgrounds each section for fun
 		background: ${props =>
 			props.theme.background
 				.override({
@@ -167,7 +192,10 @@ export const BodySection = styled.section`
 					s: props.theme.background.s + 4,
 				})
 				.getHexA()};
-
+	}
+	&:nth-child(n + 1) {
+		// This is to allow the sections to fill their backgrounds to alternate
+		// colours. The first one needs proper margins for the header/sidebar
 		margin-left: -${TOP_LEVEL_CV_PADDING}px;
 		margin-right: -${TOP_LEVEL_CV_PADDING}px;
 
